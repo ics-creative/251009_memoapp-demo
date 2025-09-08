@@ -1,0 +1,18 @@
+{
+  "name": "memo-app",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "concurrently -n backend,frontend -c blue,green \"npm:dev:backend\" \"npm:dev:frontend\"",
+    "dev:backend": "cd ./packages/backend && npm run start:dev",
+    "dev:frontend": "cd ./packages/frontend && npm run dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "ics-kitagawa",
+  "license": "MIT",
+  "type": "commonjs",
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
