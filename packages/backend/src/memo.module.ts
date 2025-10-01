@@ -1,9 +1,9 @@
-import { Module } from '@nestjs/common';
-import { MemoController } from './memo.controller';
-import { MemoService } from './memo.service';
-import { TypeOrmModule } from '@nestjs/typeorm';
-import { Memo } from '../db/memo.entity';
-import { ConfigModule } from '@nestjs/config';
+import { Module } from "@nestjs/common";
+import { MemoController } from "./memo.controller";
+import { MemoService } from "./memo.service";
+import { TypeOrmModule } from "@nestjs/typeorm";
+import { Memo } from "../db/memo.entity";
+import { ConfigModule } from "@nestjs/config";
 
 @Module({
   imports: [
@@ -11,7 +11,7 @@ import { ConfigModule } from '@nestjs/config';
       isGlobal: true,
     }),
     TypeOrmModule.forRoot({
-      type: 'sqlite',
+      type: "sqlite",
       database: process.env.DATABASE_PATH,
       entities: [Memo],
       synchronize: true,
