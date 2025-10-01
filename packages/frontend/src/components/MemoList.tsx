@@ -6,16 +6,15 @@ import "./MemoList.css";
 interface MemoListProps {
   onSelectMemo: (memo: Memo) => void;
   onCreateNew: () => void;
-  refreshTrigger: number;
 }
 
-const MemoList: React.FC<MemoListProps> = ({ onSelectMemo, onCreateNew, refreshTrigger }) => {
+const MemoList: React.FC<MemoListProps> = ({ onSelectMemo, onCreateNew }) => {
   const [memos, setMemos] = useState<Memo[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     fetchMemos();
-  }, [refreshTrigger]);
+  }, []);
 
   const fetchMemos = async () => {
     try {

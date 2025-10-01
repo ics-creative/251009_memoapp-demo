@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { Memo } from './db/memo.entity';
+import { Memo } from '../db/memo.entity';
 
 /**
  * メモのサービスクラス

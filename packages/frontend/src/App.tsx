@@ -32,18 +32,23 @@ function App() {
   };
 
   return (
-    <div className="app">
-      <MemoList
-        onSelectMemo={handleSelectMemo}
-        onCreateNew={handleCreateNew}
-        refreshTrigger={refreshTrigger}
-      />
-      <MemoEditor
-        selectedMemo={selectedMemo}
-        isCreating={isCreating}
-        onSave={handleSave}
-        onDelete={handleDelete}
-      />
+    <div className="layout">
+      <div className="notice-banner">
+        このアプリは全体に公開されています。個人情報や誹謗中傷など、不適切な内容は書き込まないでください。
+      </div>
+      <div className="app">
+        <MemoList
+          onSelectMemo={handleSelectMemo}
+          onCreateNew={handleCreateNew}
+          key={refreshTrigger}
+        />
+        <MemoEditor
+          selectedMemo={selectedMemo}
+          isCreating={isCreating}
+          onSave={handleSave}
+          onDelete={handleDelete}
+        />
+      </div>
     </div>
   );
 }

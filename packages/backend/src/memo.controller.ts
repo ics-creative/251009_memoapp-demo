@@ -1,6 +1,6 @@
 import { Body, Controller, Delete, Get, Param, Patch, Post } from '@nestjs/common';
 import { MemoService } from './memo.service';
-import { Memo } from './db/memo.entity';
+import { Memo } from '../db/memo.entity';
 
 /**
  * メモのコントローラー

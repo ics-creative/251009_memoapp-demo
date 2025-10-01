@@ -2,7 +2,7 @@ import { Module } from '@nestjs/common';
 import { MemoController } from './memo.controller';
 import { MemoService } from './memo.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { Memo } from './db/memo.entity';
+import { Memo } from '../db/memo.entity';
 import { ConfigModule } from '@nestjs/config';
 
 @Module({
